@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>New Age - Start Bootstrap Theme</title>
+    <title>Quick Code</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,12 +28,19 @@
 
   </head>
 
+   <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-120384225-1');
+    </script>
+
   <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Quick Code</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -59,7 +66,7 @@
         <div class="row h-100">
           <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
-              <h1 class="mb-5">New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>
+              <h1 class="mb-5">Quick Code is an app that will give you the best experiences in park! Be quicker or be queued!</h1>
               <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Download now!</a>
             </div>
           </div>
@@ -75,18 +82,18 @@
                   <div class="button">
                       <div class="contact">
                             <ul class="list-inline list-social">
-                              <li class="list-inline-item social-twitter">
-                                <a href="#">
+                              <li class="list-inline-item social-twitter" id="twitter">
+                                <a onclick="gtag('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});" href="#">
                                   <i class="fa fa-twitter"></i>
                                 </a>
                               </li>
-                              <li class="list-inline-item social-facebook">
-                                <a href="#">
+                              <li class="list-inline-item social-facebook" id="facebook">
+                                <a onclick="gtag('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão facebook'});" href="#">
                                   <i class="fa fa-facebook"></i>
                                 </a>
                               </li>
-                              <li class="list-inline-item social-google-plus">
-                                <a href="#">
+                              <li class="list-inline-item social-google-plus" id="googlePlus">
+                                <a onclick="gtag('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão GooglePlus'});" href="#">
                                   <i class="fa fa-google-plus"></i>
                                 </a>
                               </li>
@@ -239,13 +246,24 @@
     <script src="js/new-age.min.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120384225-1"></script>
+
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-120384225-1');
+      document.getElementById("twitter").addEventListener("click", function(){
+        console.log("clicked twitter")
+        gtag('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
+        
+      })
+      document.getElementById("facebook").addEventListener("click", function(){
+        console.log("clicked facebook")
+        gtag('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
+      })
+      document.getElementById("googlePlus").addEventListener("click", function(){
+        console.log("clicked googlePlus")
+        ('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
+      })
     </script>
     
   </body>
 
 </html>
+
