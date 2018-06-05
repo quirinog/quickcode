@@ -250,16 +250,16 @@
     <script>
       document.getElementById("twitter").addEventListener("click", function(){
         console.log("clicked twitter")
-        gtag('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
+        gtag('event', 'click-twitter', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
         
       })
       document.getElementById("facebook").addEventListener("click", function(){
         console.log("clicked facebook")
-        gtag('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
+        gtag('event', 'click-facebook', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
       })
       document.getElementById("googlePlus").addEventListener("click", function(){
         console.log("clicked googlePlus")
-        ('event', 'click', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
+        gtag('event', 'click-google', {'eventCategory': 'Cliques em botãos','eventLabel': 'Botão Twitter'});
       })
     </script>
     
